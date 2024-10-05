@@ -1,0 +1,217 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0b33; /* Near black navy blue background */
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Gradient Background */
+body {
+    background: linear-gradient(-45deg, #0a0b33, #070929, #0e1038, #10143e); /* Darkened the shades */
+    background-size: 400% 400%;
+    color: #fff;
+    animation: gradientAnimation 15s ease infinite;
+
+}
+
+header {
+    background-color: #1b1e43;
+    background: linear-gradient(90deg, #070929, #23286b); /* Gradient for header */
+    padding: 15px; /* Slightly more padding */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Reduced margin for nav links */
+}
+
+header nav ul li a {
+    color: #34f5d9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff4fc3;
+}
+
+/* Section Styling */
+.section {
+    padding: 40px 0; /* Reduced from 60px to 40px */
+    background-color: #0a0b33; /* Near black navy blue */
+    min-height: 70vh; /* Further reduced height */
+}
+
+
+.container {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 15px; 
+    font-size: 2.2rem;
+    background: linear-gradient(to right, #34f5d9, #18a7b5); /* Gradient for headers */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller grid items */
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #2d315a; /* Darker card background */
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card h3 {
+    color: #34f5d9;
+    margin-bottom: 10px;
+}
+
+/* Skills */
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: inline-block;
+    margin: 8px;
+    padding: 8px 16px;
+    background-color: #1b1e43; /* Deep blue for skill buttons */
+    color: white;
+    border-radius: 18px;
+    transition: background-color 0.3s;
+}
+
+.skills-list li:hover {
+    background-color: #4c58e4; /* Lighter blue on hover */
+}
+
+/* Resume Button */
+.resume-btn {
+    background-color: #34f5d9;
+    color: #1b1e43;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.resume-btn:hover {
+    background-color: #ff4fc3;
+}
+
+/* Footer */
+footer {
+    background-color: #181b4d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1b1e43, #070929); /* Gradient footer */
+}
+/* Animated Gradient Background */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #1b1e43, #070929, #181b4d, #1e2466);
+    background-size: 400% 400%;
+    color: #fff;
+    animation: gradientAnimation 15s ease infinite;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Floating Particles */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1; /* Behind all elements */
+    overflow: hidden;
+}
+
+.particles::before, .particles::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    width: 200%;
+    height: 200%;
+    background-repeat: repeat;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.2) 1px, transparent 1px);
+    animation: float 60s linear infinite;
+    opacity: 0.1;
+}
+
+.particles::after {
+    animation-delay: -30s;
+    opacity: 0.05;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-200px);
+    }
+}
+
+
+/* Scroll animations */
+.section {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease-in-out;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
